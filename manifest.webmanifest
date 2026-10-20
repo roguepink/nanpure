@@ -1,0 +1,18 @@
+{
+  "name": "やさしいナンプレ",
+  "short_name": "ナンプレ",
+  "description": "広告なし・登録なし・ずっと無料。ねこと いっしょに、1面ずつ たのしく とける ナンプレ(数独)です。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "id": "./?app=nanpure-1",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff6e6",
+  "theme_color": "#fff6e6",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
