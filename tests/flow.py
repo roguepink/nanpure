@@ -11,7 +11,7 @@ class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *a): pass
 srv = socketserver.TCPServer(('127.0.0.1', 0), functools.partial(Quiet, directory=str(D)))
 threading.Thread(target=srv.serve_forever, daemon=True).start()
-url = f'http://127.0.0.1:{srv.server_address[1]}/'
+url = f'http://127.0.0.1:{srv.server_address[1]}/#noinstall'
 errors, fails = [], []
 def check(cond, msg):
     print(('OK  ' if cond else 'NG  ') + msg)

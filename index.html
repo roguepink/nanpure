@@ -263,6 +263,25 @@
 
 <canvas id="fx"></canvas>
 
+<style>
+  /* install.js の案内(#igHelp)は body の字の色を引きつぐため、明るいアプリだと 暗い字が暗い札に乗って読めない。白い字にする。
+     細い画面(iPhone SE)では「あとで(このまま遊ぶ)」が3行に折れるので、ボタンを たてに並べる。部品の元が直ったら消してよい */
+  #igHelp { color: #fff; font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", "Noto Sans JP", system-ui, sans-serif; }
+  @media (max-width: 420px) { #igHelp .ig-btns { flex-direction: column; } }
+</style>
+<script>
+  // はじめの画面(Google Play 風: ホーム画面に入れる / このまま遊ぶ)。install.js が出す。アドレスに #noinstall で出ない
+  window.INSTALL_GATE = {
+    id: 'nanpure', name: 'やさしいナンプレ', icon: 'icon-192.png', color: '#1f9a5a',
+    tagline: 'ねこと いっしょの 数字パズル',
+    badges: ['無料', '広告なし', '登録なし'],
+    shots: ['shots/1.jpg', 'shots/2.jpg', 'shots/3.jpg', 'shots/4.jpg'],
+    desc: 'たて・よこ・太い線の四角に、1〜9の数字を1つずつ入れていく、定番のナンプレ(数独)です。スマホに慣れていない方でも、説明なしで すぐ遊べます。',
+    points: ['まちがえても 赤く出て すぐ消えるだけ。こまったら ヒントが 理由つきで1マス教えてくれる', 'ステージ1は とても簡単。少しずつ難しくなり、同じ問題は 二度と出ない', 'ねこが応援。3面クリアするごとに 動物の「なかま」がふえる'],
+    playLabel: '▶ このまま遊ぶ'
+  };
+</script>
+<script src="install.js"></script>
 <script src="engine.js"></script>
 <script>
 'use strict';
